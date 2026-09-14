@@ -40,7 +40,7 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
                         Self Description: ${selfDescription}
                         Job Description: ${jobDescription}
 `
-
+console.log("Gemini API key loaded:", !!process.env.GOOGLE_GENAI_API_KEY)
     const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
         contents: prompt,
